@@ -68,7 +68,7 @@ Se usa: --- Recursión mutua (indirecta): par() llama a impar() y impar() llama 
 --- bool par(int n)   : si n == 1 → false (caso base, 1 no es par); si n > 1 → llama a impar(n-1)
 --- main()            : prueba ambas funciones del 1 al 10 e imprime PAR o IMPAR
 
-____________________________________________________ RELACIONES DE RECURRENCIA ____________________________________________________
+__________________________________________________ RELACIONES DE RECURRENCIA _________________________________________________
 
 --- impar(n): n == 1 → true  | n > 1 → par(n-1)   [el antecesor de un impar es par]
 --- par(n):   n == 1 → false | n > 1 → impar(n-1) [el antecesor de un par es impar]
