@@ -52,7 +52,7 @@ Funciones mutuamente recursivas par(n) e impar(n) en C++
 El objetivo es determinar la paridad de un número natural usando únicamente las reglas del enunciado,
 sin operadores aritméticos ni módulo. Las dos funciones se llaman entre sí — eso es recursión mutua (indirecta).
 
-__________________________________________________________IMPORTANTE____________________________________________________________
+__________________________________________________________ IMPORTANTE ____________________________________________________________
 
 Las únicas reglas permitidas son las dadas por el enunciado: 1 es impar; el antecesor de un impar es par;
 el antecesor de un par es impar. No se usa % 2 ni ningún otro operador.
@@ -68,7 +68,7 @@ Se usa: --- Recursión mutua (indirecta): par() llama a impar() y impar() llama 
 --- bool par(int n)   : si n == 1 → false (caso base, 1 no es par); si n > 1 → llama a impar(n-1)
 --- main()            : prueba ambas funciones del 1 al 10 e imprime PAR o IMPAR
 
-____________________________________________________RELACIONES DE RECURRENCIA____________________________________________________
+____________________________________________________ RELACIONES DE RECURRENCIA ____________________________________________________
 
 --- impar(n): n == 1 → true  | n > 1 → par(n-1)   [el antecesor de un impar es par]
 --- par(n):   n == 1 → false | n > 1 → impar(n-1) [el antecesor de un par es impar]
