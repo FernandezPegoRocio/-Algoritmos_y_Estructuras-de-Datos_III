@@ -1,0 +1,118 @@
+<mxfile host="65bd71144e">
+    <diagram id="Jy3J-9-T5jCjQVOVQMVh" name="Page-1">
+        <mxGraphModel dx="798" dy="434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="960" pageHeight="560" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="t0" parent="1" style="text;fontStyle=1;fontSize=14;align=left;" value="secuencia—04 Enviar Notificacion (flujo interno)" vertex="1">
+                    <mxGeometry height="26" width="500" x="20" y="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#E6F1FB;strokeColor=#185FA5;fontColor=#0C447C;" value="«control»&#xa;ControladorTicket" vertex="1">
+                    <mxGeometry height="44" width="150" x="50" y="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#E6F1FB;strokeColor=#185FA5;fontColor=#0C447C;" value="«control»&#xa;ControladorNotificacion" vertex="1">
+                    <mxGeometry height="44" width="160" x="290" y="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#EEEDFE;strokeColor=#534AB7;fontColor=#3C3489;" value="«entidad»&#xa;:Ticket" vertex="1">
+                    <mxGeometry height="44" width="120" x="560" y="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#E1F5EE;strokeColor=#0F6E56;fontColor=#085041;" value="«entidad»&#xa;Usuario (dest.)" vertex="1">
+                    <mxGeometry height="44" width="130" x="770" y="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="lv3" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="125" y="132" as="sourcePoint"/>
+                        <mxPoint x="125" y="526" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lv5" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="370" y="132" as="sourcePoint"/>
+                        <mxPoint x="370" y="526" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lv4" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="132" as="sourcePoint"/>
+                        <mxPoint x="620" y="526" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lv7" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="835" y="132" as="sourcePoint"/>
+                        <mxPoint x="835" y="526" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="act3" parent="1" style="fillColor=#E0E0E0;strokeColor=#AAAAAA;" value="" vertex="1">
+                    <mxGeometry height="290" width="10" x="120" y="172" as="geometry"/>
+                </mxCell>
+                <mxCell id="act5" parent="1" style="fillColor=#E0E0E0;strokeColor=#AAAAAA;" value="" vertex="1">
+                    <mxGeometry height="235" width="10" x="365" y="207" as="geometry"/>
+                </mxCell>
+                <mxCell id="m1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="1: crearNotificacion(ticket, destinatario)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="177" as="sourcePoint"/>
+                        <mxPoint x="365" y="177" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nf" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#FAECE7;strokeColor=#993C1D;fontColor=#712B13;" value="«entidad»&#xa;:Notificacion" vertex="1">
+                    <mxGeometry height="44" width="80" x="860" y="215" as="geometry"/>
+                </mxCell>
+                <mxCell id="lv_n" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="890" y="259" as="sourcePoint"/>
+                        <mxPoint x="890" y="526" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;strokeColor=#993C1D;fontColor=#993C1D;entryX=-0.009;entryY=0.345;entryDx=0;entryDy=0;entryPerimeter=0;" target="nf" value="2: new Notificacion(mensaje, fecha, ticket)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="375" y="230" as="sourcePoint"/>
+                        <mxPoint x="840" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m2r" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;strokeColor=#993C1D;fontColor=#993C1D;" value=":notificacion">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="890" y="270" as="sourcePoint"/>
+                        <mxPoint x="375" y="269" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="3: getDestinatario()">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="375" y="310" as="sourcePoint"/>
+                        <mxPoint x="620" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m3r" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;" value=":usuario">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="335" as="sourcePoint"/>
+                        <mxPoint x="375" y="335" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="4: enviarNotificacion(notificacion, usuario)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="375" y="378" as="sourcePoint"/>
+                        <mxPoint x="870" y="378" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m4r" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;" value="ok">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="870" y="403" as="sourcePoint"/>
+                        <mxPoint x="375" y="403" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="5: agregarNotificacion(notificacion)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="375" y="440" as="sourcePoint"/>
+                        <mxPoint x="620" y="440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m6r" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;" value="notificacion enviada y registrada">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="365" y="480" as="sourcePoint"/>
+                        <mxPoint x="130" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

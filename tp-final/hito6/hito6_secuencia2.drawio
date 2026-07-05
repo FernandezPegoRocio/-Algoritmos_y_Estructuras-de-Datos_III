@@ -1,0 +1,197 @@
+<mxfile host="65bd71144e">
+    <diagram id="fVd6qr2qcuTYs5LOIC1E" name="Page-1">
+        <mxGraphModel dx="1196" dy="651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="720" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="t0" parent="1" style="text;fontStyle=1;fontSize=14;align=left;" value="secuencia-03 Cambiar Estado del Ticket" vertex="1">
+                    <mxGeometry height="26" width="500" x="20" y="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" parent="1" style="shape=mxgraph.flowchart.actor;fillColor=#f5f5f5;strokeColor=#666666;verticalLabelPosition=bottom;verticalAlign=top;fontStyle=1;fontSize=10;" value="Representante&#xa;Telefónico" vertex="1">
+                    <mxGeometry height="54" width="36" x="40" y="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#F8CECC;strokeColor=#b85450;fontColor=#6C0000;" value="«borde»&#xa;GUI" vertex="1">
+                    <mxGeometry height="44" width="120" x="160" y="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#E6F1FB;strokeColor=#185FA5;fontColor=#0C447C;" value="«control»&#xa;ControladorTicket" vertex="1">
+                    <mxGeometry height="44" width="150" x="360" y="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#EEEDFE;strokeColor=#534AB7;fontColor=#3C3489;" value="«entidad»&#xa;:Ticket" vertex="1">
+                    <mxGeometry height="44" width="120" x="580" y="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#FAECE7;strokeColor=#993C1D;fontColor=#712B13;" value="«entidad»&#xa;Estado" vertex="1">
+                    <mxGeometry height="44" width="120" x="770" y="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#E6F1FB;strokeColor=#185FA5;fontColor=#0C447C;" value="«control»&#xa;ControladorNotificacion" vertex="1">
+                    <mxGeometry height="44" width="130" x="946" y="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="lv1" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="58" y="130" as="sourcePoint"/>
+                        <mxPoint x="58" y="684" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lv2" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="110" as="sourcePoint"/>
+                        <mxPoint x="220" y="684" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lv3" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="435" y="110" as="sourcePoint"/>
+                        <mxPoint x="435" y="684" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lv4" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640" y="110" as="sourcePoint"/>
+                        <mxPoint x="640" y="684" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lv5" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="830" y="110" as="sourcePoint"/>
+                        <mxPoint x="830" y="684" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lv6" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1005" y="110" as="sourcePoint"/>
+                        <mxPoint x="1005" y="684" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="act2" parent="1" style="fillColor=#E0E0E0;strokeColor=#AAAAAA;" value="" vertex="1">
+                    <mxGeometry height="480" width="10" x="215" y="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="act3" parent="1" style="fillColor=#E0E0E0;strokeColor=#AAAAAA;" value="" vertex="1">
+                    <mxGeometry height="400" width="10" x="430" y="195" as="geometry"/>
+                </mxCell>
+                <mxCell id="act4" parent="1" style="fillColor=#E0E0E0;strokeColor=#AAAAAA;" value="" vertex="1">
+                    <mxGeometry height="110" width="10" x="635" y="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="act5" parent="1" style="fillColor=#E0E0E0;strokeColor=#AAAAAA;" value="" vertex="1">
+                    <mxGeometry height="50" width="10" x="825" y="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="act6" parent="1" style="fillColor=#E0E0E0;strokeColor=#AAAAAA;" value="" vertex="1">
+                    <mxGeometry height="80" width="10" x="1000" y="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="m1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="1: listarTickets()">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="58" y="165" as="sourcePoint"/>
+                        <mxPoint x="215" y="165" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m1a" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="listarTickets()">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="225" y="195" as="sourcePoint"/>
+                        <mxPoint x="430" y="195" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m1r" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;" value="lista de tickets">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="430" y="220" as="sourcePoint"/>
+                        <mxPoint x="58" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="2: mostrarDetalleTicket(idTicket)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="58" y="265" as="sourcePoint"/>
+                        <mxPoint x="215" y="265" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m2a" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="solicitarEstadosValidos(id)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="225" y="290" as="sourcePoint"/>
+                        <mxPoint x="430" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m2b" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="getTransicionesValidas()">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="318" as="sourcePoint"/>
+                        <mxPoint x="825" y="318" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m2r" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;" value="estados posibles">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="825" y="346" as="sourcePoint"/>
+                        <mxPoint x="58" y="346" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="3: confirmarCambio(e: Estado)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="58" y="390" as="sourcePoint"/>
+                        <mxPoint x="215" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m3a" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="cambiarEstado(id, e: Estado)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="225" y="415" as="sourcePoint"/>
+                        <mxPoint x="430" y="415" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m3b" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="cambiarEstado(e: Estado)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="445" as="sourcePoint"/>
+                        <mxPoint x="635" y="445" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m3c" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;strokeColor=#5F5E5A;fontColor=#5F5E5A;" value="agregarHito(hitoAutomatico)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="478" as="sourcePoint"/>
+                        <mxPoint x="635" y="478" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="4: crearNotificacion(ticket, cliente)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="515" as="sourcePoint"/>
+                        <mxPoint x="1000" y="515" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nf" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=11;fillColor=#FAECE7;strokeColor=#993C1D;fontColor=#712B13;" value="«entidad»&#xa;:Notificacion" vertex="1">
+                    <mxGeometry height="44" width="70" x="1100" y="536" as="geometry"/>
+                </mxCell>
+                <mxCell id="lv_n" edge="1" parent="1" style="edgeStyle=none;dashed=1;strokeColor=#AAAAAA;">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1129" y="580" as="sourcePoint"/>
+                        <mxPoint x="1129" y="684" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m4a" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=10;strokeColor=#993C1D;fontColor=#993C1D;" value="new Notificacion()">
+                    <mxGeometry relative="1" x="NaN" y="40" as="geometry">
+                        <mxPoint x="40" as="offset"/>
+                        <mxPoint x="1014" y="558" as="sourcePoint"/>
+                        <mxPoint x="1014" y="558" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m4b" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=11;" value="enviarNotificacion(notificacion, cliente)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1010" y="600" as="sourcePoint"/>
+                        <mxPoint x="1033" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m4r" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;" value="notificacion enviada">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1000" y="635" as="sourcePoint"/>
+                        <mxPoint x="440" y="635" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m5p" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;" value="ok">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="430" y="660" as="sourcePoint"/>
+                        <mxPoint x="225" y="660" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="m5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;fontSize=11;" value="5: mostrarConfirmacion(&#39;Estado actualizado&#39;)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="215" y="676" as="sourcePoint"/>
+                        <mxPoint x="58" y="676" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lKxFsq1BhCsljYcOoYlR-60" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="" vertex="1">
+                    <mxGeometry height="54" width="27" x="44.5" y="66" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
