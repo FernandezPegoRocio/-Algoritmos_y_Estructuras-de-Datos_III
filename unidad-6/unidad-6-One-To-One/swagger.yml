@@ -1,0 +1,107 @@
+openapi: "3.0.0"
+
+info:
+  title: "API REST - People"
+  description: "API para gestionar personas (Flask + Connexion + SQLAlchemy)"
+  version: "1.0.0"
+
+servers:
+  - url: "/api"
+
+components:
+  schemas:
+    Person:
+      type: "object"
+      required:
+        - lname
+      properties:
+        fname:
+          type: "string"
+          description: "Nombre de la persona"
+        lname:
+          type: "string"
+          description: "Apellido de la persona (identificador único)"
+  parameters:
+    lname:
+      name: "lname"
+      description: "Apellido de la persona"
+      in: path
+      required: true
+      schema:
+        type: "string"
+
+paths:
+  /people:
+    get:
+      operationId: "people.read_all"
+      tags:
+        - "People"
+      summary: "Obtener todas las personas"
+      responses:
+        "200":
+          description: "Lista de personas obtenida correctamente"
+
+    post:
+      operationId: "people.create"
+      tags:
+        - "People"
+      summary: "Crear una nueva persona"
+      requestBody:
+        description: "Datos de la persona a crear"
+        required: true
+        content:
+          application/json:
+            schema:
+              x-body-name: "person"
+              $ref: "#/components/schemas/Person"
+      responses:
+        "201":
+          description: "Persona creada correctamente"
+        "406":
+          description: "Ya existe una persona con ese apellido"
+
+  /people/{lname}:
+    get:
+      operationId: "people.read_one"
+      tags:
+        - "People"
+      summary: "Obtener una persona por apellido"
+      parameters:
+        - $ref: "#/components/parameters/lname"
+      responses:
+        "200":
+          description: "Persona encontrada"
+        "404":
+          description: "Persona no encontrada"
+
+    put:
+      operationId: "people.update"
+      tags:
+        - "People"
+      summary: "Actualizar una persona"
+      parameters:
+        - $ref: "#/components/parameters/lname"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              x-body-name: "person"
+              $ref: "#/components/schemas/Person"
+      responses:
+        "200":
+          description: "Persona actualizada correctamente"
+        "404":
+          description: "Persona no encontrada"
+
+    delete:
+      operationId: "people.delete"
+      tags:
+        - "People"
+      summary: "Eliminar una persona"
+      parameters:
+        - $ref: "#/components/parameters/lname"
+      responses:
+        "200":
+          description: "Persona eliminada correctamente"
+        "404":
+          description: "Persona no encontrada"

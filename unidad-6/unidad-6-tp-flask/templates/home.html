@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Ilustradores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/api/ilustradores">API Ilustradores (JSON)</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1 class="logo">Galería de Ilustradores</h1>
+    <h3>[Python REST API con Flask, SQLite, SQLAlchemy y Marshmallow]</h3>
+
+    {% for ilustrador in ilustradores %}
+    <div class="ilustrador-card">
+        <strong class="nombre">{{ ilustrador.fname }} {{ ilustrador.lname }}</strong>
+        <span class="especialidad">— {{ ilustrador.especialidad }}</span>
+        <ul>
+            {% for obra in ilustrador.ilustraciones %}
+            <li>
+                <em>{{ obra.titulo }}</em>
+                ({{ obra.tecnica }}, {{ obra.anio }})
+                — <strong>${{ "%.2f"|format(obra.precio) }}</strong>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+
+    <br>
+    <nav>
+        <ul class="menu">
+            <li><a href="/api/ilustradores">Ver JSON de ilustradores</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

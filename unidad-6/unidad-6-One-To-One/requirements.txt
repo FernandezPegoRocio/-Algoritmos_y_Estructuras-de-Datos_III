@@ -1,0 +1,5 @@
+flask>=3.0.0
+flask-sqlalchemy==3.0.5
+flask-marshmallow==0.15.0
+marshmallow==3.23.2
+marshmallow-sqlalchemy==0.29.0

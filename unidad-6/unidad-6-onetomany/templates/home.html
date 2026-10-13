@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Flask REST API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/api/people">API People (JSON)</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1 class="logo">UFasta ISII - Team Members, Welcome!!!</h1>
+    <h3>[Python REST APIs With Flask, SQLite, SQLAlchemy & Marshmallow]</h3>
+
+    {% for person in people %}
+    <strong>{{ person.fname }} {{ person.lname }}</strong>
+    <ul>
+        {% for note in person.notes %}
+        <li>{{ note.content }}</li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+
+    <br>
+    <nav>
+        <ul class="menu">
+            <li><a href="/api/people">Ver JSON de personas</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

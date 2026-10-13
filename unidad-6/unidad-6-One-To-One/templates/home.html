@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People API</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #4a90d9; color: white; }
+        tr:nth-child(even) { background-color: #f5f5f5; }
+        a { color: #4a90d9; }
+    </style>
+</head>
+<body>
+    <h1>People API</h1>
+    <p>Personas registradas en la base de datos:</p>
+
+    {% if people %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in people %}
+            <tr>
+                <td>{{ person.id }}</td>
+                <td>{{ person.fname }}</td>
+                <td>{{ person.lname }}</td>
+                <td>{{ person.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No hay personas registradas todavía.</p>
+    {% endif %}
+
+    <br>
+    <p><a href="/api/ui">→ Abrir Swagger UI</a></p>
+    <p><a href="/api/people">→ Ver JSON de personas</a></p>
+</body>
+</html>
