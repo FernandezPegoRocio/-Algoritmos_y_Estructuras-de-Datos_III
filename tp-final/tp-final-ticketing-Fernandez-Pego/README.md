@@ -25,8 +25,7 @@ El trabajo se fue armando por hitos durante el cuatrimestre. En el hito 1 escrib
 requerimientos y el diagrama de casos de uso. En el 2, las fichas de crear ticket,
 registrar hito y cambiar estado. El 3 fue el primer diagrama de clases, y en el 4 llegó el
 cambio del cliente con el producto y el tipo de producto. En el 5 hice los diagramas de
-secuencia, que defendí en el oral, y el 6 fue el cierre del diseño con las correcciones de
-clase.
+secuencia, y el 6 fue el cierre del diseño con las correcciones de clase.
 
 Con el diseño cerrado, pasé el diagrama de clases a Python casi línea por línea, con tests
 desde el principio, y después le sumé la persistencia en SQLite. La primera interfaz fue por
@@ -66,7 +65,7 @@ con versiones de librerías que no andaban con Python nuevo (SQLAlchemy 2.1.3 y
 Marshmallow 4), y para este TP preferí tener una sola dependencia, Flask.
 
 Dejé los métodos con los mismos nombres que en el UML, en camelCase, aunque en Python se
-use otro estilo. Así puedo mostrar cada método del diagrama en el código durante el oral.
+use otro estilo. 
 
 Estado y TipoProducto son enums, como se corrigió en clase. Las transiciones válidas las
 guarda Estado: de abierto a en proceso o a cerrado, de en proceso a cerrado, y de cerrado
