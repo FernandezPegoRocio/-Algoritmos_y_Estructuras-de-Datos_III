@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block titulo %}Notificaciones · Ticketing{% endblock %}
+{% block contenido %}
+<section class="tarjeta">
+  <h1>Notificaciones</h1>
+  {% if notificaciones %}
+    <ul class="lista">
+      {% for n in notificaciones %}
+        <li>
+          <a href="{{ url_for('mostrarDetalleTicket', id=n.ticket.id) }}">
+            <span class="titulo">{{ n.mensaje }}</span>
+            <span class="meta">{{ n.fecha.strftime('%d/%m/%Y %H:%M') }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="vacio">No tenés notificaciones.</p>
+  {% endif %}
+</section>
+{% endblock %}

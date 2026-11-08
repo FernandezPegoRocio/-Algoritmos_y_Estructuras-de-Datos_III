@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block titulo %}Ticket #{{ t.id }} · Ticketing{% endblock %}
+{% block contenido %}
+<section class="tarjeta">
+  <div class="encabezado">
+    <h1>#{{ t.id }} · {{ t.titulo }}</h1>
+    <span class="estado estado--{{ t.estado.name|lower }}">{{ t.estado.getNombre() }}</span>
+  </div>
+  <dl class="datos">
+    <dt>Cliente</dt><dd>{{ t.cliente }}</dd>
+    <dt>Representante</dt><dd>{{ t.representante or 'sin asignar' }}</dd>
+    <dt>Producto</dt><dd>{{ t.getProducto() }}</dd>
+    <dt>Creado</dt><dd>{{ t.fecha.strftime('%d/%m/%Y %H:%M') }}</dd>
+    <dt>Descripción</dt><dd>{{ t.descripcion }}</dd>
+  </dl>
+</section>
+
+<div class="columnas">
+  <section class="tarjeta">
+    <h2>Hitos</h2>
+    {% if t.hitos %}
+      <ol class="hilo">
+        {% for h in t.hitos %}
+          <li class="{{ 'propio' if h.autor == usuario else '' }}">
+            <div class="meta">{{ h.autor.email }} · {{ h.fecha.strftime('%d/%m/%Y %H:%M') }}</div>
+            <div>{{ h.contenido }}</div>
+          </li>
+        {% endfor %}
+      </ol>
+    {% else %}
+      <p class="vacio">Todavía no hay hitos.</p>
+    {% endif %}
+    {% if t.estaCerrado() %}
+      <p class="ayuda">El ticket está cerrado. Reabrilo para seguir la conversación.</p>
+    {% else %}
+      <form method="post" action="{{ url_for('mostrarFormularioHito', id=t.id) }}" class="formulario">
+        <label>Nuevo hito
+          <textarea name="contenido" rows="3" required></textarea>
+        </label>
+        <button type="submit">Registrar hito</button>
+      </form>
+    {% endif %}
+  </section>
+
+  <aside class="tarjeta">
+    <h2>Cambiar estado</h2>
+    {% if estados %}
+      <form method="post" action="{{ url_for('mostrarFormularioCambioEstado', id=t.id) }}" class="formulario">
+        <select name="estado">
+          {% for e in estados %}<option value="{{ e.name }}">{{ e.getNombre() }}</option>{% endfor %}
+        </select>
+        <button type="submit">Confirmar cambio</button>
+      </form>
+    {% else %}
+      <p class="vacio">No hay cambios de estado disponibles.</p>
+    {% endif %}
+
+    {% if not esCliente and usuario == t.representante %}
+      <h2>Tipo de producto</h2>
+      <form method="post" action="{{ url_for('mostrarAsignarTipo', id=t.id) }}" class="formulario">
+        <select name="tipo">
+          {% for tp in tipos %}
+            <option value="{{ tp.name }}" {% if t.getProducto().getTipo() == tp %}selected{% endif %}>{{ tp.getRubro() }}</option>
+          {% endfor %}
+        </select>
+        <button type="submit">Asignar tipo</button>
+      </form>
+    {% endif %}
+  </aside>
+</div>
+{% endblock %}

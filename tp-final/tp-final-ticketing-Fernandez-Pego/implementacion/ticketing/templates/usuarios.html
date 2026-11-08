@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Usuarios · Ticketing{% endblock %}
+{% block contenido %}
+<div class="columnas">
+  <section class="tarjeta">
+    <h1>Usuarios</h1>
+    <ul class="lista simple">
+      {% for u in usuarios %}<li>{{ u }}</li>{% endfor %}
+    </ul>
+  </section>
+  <section class="tarjeta">
+    <h1>Representantes</h1>
+    <ul class="lista simple">
+      {% for r in representantes %}
+        <li>{{ r }}<div class="detalle-linea">Atiende: {{ r.tiposProducto|map(attribute='value')|map('last')|join(', ') }}</div></li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+{% endblock %}

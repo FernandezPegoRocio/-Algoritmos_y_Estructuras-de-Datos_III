@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block titulo %}Mis tickets · Ticketing{% endblock %}
+{% block contenido %}
+<section class="tarjeta">
+  <div class="encabezado">
+    <h1>Mis tickets</h1>
+    {% if esCliente %}<a class="boton" href="{{ url_for('mostrarFormularioNuevoTicket') }}">+ Nuevo ticket</a>{% endif %}
+  </div>
+  {% if tickets %}
+    <ul class="lista">
+      {% for t in tickets %}
+        <li>
+          <a href="{{ url_for('mostrarDetalleTicket', id=t.id) }}">
+            <span class="numero">#{{ t.id }}</span>
+            <span class="titulo">{{ t.titulo }}</span>
+            <span class="estado estado--{{ t.estado.name|lower }}">{{ t.estado.getNombre() }}</span>
+          </a>
+          <div class="detalle-linea">
+            {{ t.getProducto() }} ·
+            {% if esCliente %}Representante: {{ t.representante.legajo if t.representante else 'sin asignar' }}
+            {% else %}Cliente: {{ t.cliente.nombre }}{% endif %}
+            · {{ t.hitos|length }} hito(s)
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="vacio">No tenés tickets todavía.</p>
+  {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block titulo %}Sistema de Ticketing{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="{{ url_for('mostrarTickets') if usuario else url_for('login') }}">🎫 Ticketing</a>
+    {% if usuario %}
+      <nav>
+        <a href="{{ url_for('mostrarTickets') }}">Mis tickets</a>
+        {% if esCliente %}<a href="{{ url_for('mostrarFormularioNuevoTicket') }}">Nuevo ticket</a>{% endif %}
+        <a href="{{ url_for('mostrarNotificaciones') }}">Notificaciones <span class="contador">{{ cantNotificaciones }}</span></a>
+        {% if not esCliente %}<a href="{{ url_for('mostrarUsuarios') }}">Usuarios</a>{% endif %}
+        <a href="{{ url_for('logout') }}">Salir</a>
+      </nav>
+    {% endif %}
+  </header>
+
+  <main class="contenido">
+    {% if usuario %}
+      <p class="quien">{{ 'Cliente' if esCliente else 'Representante' }}: <strong>{{ usuario }}</strong></p>
+    {% endif %}
+    {% with mensajes = get_flashed_messages(with_categories=true) %}
+      {% for categoria, mensaje in mensajes %}
+        <div class="aviso aviso--{{ categoria }}">{{ '✔' if categoria == 'ok' else '✘' }} {{ mensaje }}</div>
+      {% endfor %}
+    {% endwith %}
+    {% block contenido %}{% endblock %}
+  </main>
+</body>
+</html>

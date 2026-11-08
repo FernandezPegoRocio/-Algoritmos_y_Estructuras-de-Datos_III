@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}Iniciar sesión · Ticketing{% endblock %}
+{% block contenido %}
+<section class="tarjeta angosta">
+  <h1>Iniciar sesión</h1>
+  <form method="post" class="formulario">
+    <label>Email
+      <input type="email" name="email" required autofocus placeholder="ana@mail.com">
+    </label>
+    <button type="submit">Entrar</button>
+  </form>
+  <p class="ayuda">¿No tenés cuenta? <a href="{{ url_for('mostrarRegistro') }}">Registrate como cliente</a>.</p>
+  <p class="ayuda">Usuarios de prueba: ana@mail.com (cliente), laura@soporte.com y martin@soporte.com (representantes).</p>
+</section>
+{% endblock %}

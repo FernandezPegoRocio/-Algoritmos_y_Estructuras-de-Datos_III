@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block titulo %}Nuevo ticket · Ticketing{% endblock %}
+{% block contenido %}
+<section class="tarjeta angosta">
+  <h1>Nuevo ticket</h1>
+  <form method="post" class="formulario">
+    <label>Título
+      <input type="text" name="titulo" required value="{{ form.get('titulo', '') }}" placeholder="La heladera no enfría">
+    </label>
+    <label>Descripción del problema
+      <textarea name="descripcion" rows="4" required>{{ form.get('descripcion', '') }}</textarea>
+    </label>
+    <label>Producto
+      <input type="text" name="producto" required value="{{ form.get('producto', '') }}" placeholder="Heladera Patrick 300 L">
+    </label>
+    <label>Tipo de producto
+      <select name="tipo">
+        <option value="">No sé</option>
+        {% for t in tipos %}
+          <option value="{{ t.name }}" {% if form.get('tipo') == t.name %}selected{% endif %}>{{ t.getRubro() }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <button type="submit">Crear ticket</button>
+  </form>
+</section>
+{% endblock %}

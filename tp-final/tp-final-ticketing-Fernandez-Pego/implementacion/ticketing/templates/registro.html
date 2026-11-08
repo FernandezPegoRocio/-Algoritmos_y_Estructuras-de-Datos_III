@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Registro · Ticketing{% endblock %}
+{% block contenido %}
+<section class="tarjeta angosta">
+  <h1>Registrarme como cliente</h1>
+  <form method="post" class="formulario">
+    <label>Email
+      <input type="email" name="email" required value="{{ form.get('email', '') }}">
+    </label>
+    <label>Nombre
+      <input type="text" name="nombre" required value="{{ form.get('nombre', '') }}">
+    </label>
+    <label>Teléfono
+      <input type="text" name="telefono" value="{{ form.get('telefono', '') }}">
+    </label>
+    <button type="submit">Registrarme</button>
+  </form>
+  <p class="ayuda"><a href="{{ url_for('login') }}">Volver al inicio de sesión</a></p>
+</section>
+{% endblock %}
